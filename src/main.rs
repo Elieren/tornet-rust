@@ -98,7 +98,7 @@ fn is_tor_running() -> bool {
 
 fn ma_ip_tor() -> Option<String> {
     let url: &str = "https://api.ipify.org";
-    let proxy = Proxy::all("socks5://172.1.1.1:9050");
+    let proxy = Proxy::all("socks5://127.0.0.1:9050");
 
     let client = Client::builder()
         .proxy(proxy.expect("Error connect to proxy"))
